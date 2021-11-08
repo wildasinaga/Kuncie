@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>Episode</name>
+   <name>RickandMortyAPI</name>
    <tag></tag>
-   <elementGuidId>27617672-5caf-4958-a272-15f71a650b78</elementGuidId>
+   <elementGuidId>421b4bfd-0382-422d-9731-ec89ef834ee8</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
    <useRalativeImagePath>false</useRalativeImagePath>
    <connectionTimeout>-1</connectionTimeout>
@@ -11,11 +11,18 @@
    <httpBody></httpBody>
    <httpBodyContent></httpBodyContent>
    <httpBodyType></httpBodyType>
+   <httpHeaderProperties>
+      <isSelected>true</isSelected>
+      <matchCondition>equals</matchCondition>
+      <name>Content-Type</name>
+      <type>Main</type>
+      <value>application/x-www-form-urlencoded</value>
+   </httpHeaderProperties>
    <katalonVersion>8.0.5</katalonVersion>
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>${episoderequest}</restUrl>
+   <restUrl>${query}</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
@@ -27,9 +34,9 @@
    <variables>
       <defaultValue>GlobalVariable.request</defaultValue>
       <description></description>
-      <id>698dcd20-35b6-4393-a058-be18191d5ee1</id>
+      <id>25ecba56-fc3f-495f-9d8c-303a44b6cf66</id>
       <masked>false</masked>
-      <name>episoderequest</name>
+      <name>query</name>
    </variables>
    <verificationScript>import static org.assertj.core.api.Assertions.*
 

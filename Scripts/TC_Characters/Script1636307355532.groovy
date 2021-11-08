@@ -19,9 +19,9 @@ import org.openqa.selenium.Keys as Keys
 import groovy.json.JsonSlurper as JsonSlurper
 import com.kms.katalon.core.util.KeywordUtil as KeywordUtil
 
-GlobalVariable.request = 'character?name=Shmlangela'
+GlobalVariable.request = 'https://rickandmortyapi.com/api/character?name=Shmlangela'
 
-characterss = WS.sendRequest(findTestObject('characters', [('query') : GlobalVariable.request]))
+characterss = WS.sendRequest(findTestObject('RickandMortyAPI', [('query') : GlobalVariable.request]))
 
 WS.verifyResponseStatusCode(characterss, 200)
 
@@ -50,7 +50,7 @@ for (def member : array1) {
 
         GlobalVariable.request = location
 
-        userLocation = WS.sendRequest(findTestObject('Location', [('query') : GlobalVariable.request]))
+        userLocation = WS.sendRequest(findTestObject('RickandMortyAPI', [('query') : GlobalVariable.request]))
 
         WS.verifyResponseStatusCode(userLocation, 200)
 
@@ -70,7 +70,7 @@ for (def member : array1) {
 			
 			GlobalVariable.userEp = memberEp
 			
-			userEpisode = WS.sendRequest(findTestObject('Episode', [('episoderequest') : GlobalVariable.userEp]))
+			userEpisode = WS.sendRequest(findTestObject('RickandMortyAPI', [('query') : GlobalVariable.userEp]))
 			
 			WS.verifyResponseStatusCode(userEpisode, 200)
 			
@@ -88,7 +88,6 @@ for (def member : array1) {
 					break
 				}
 			}
-			
 		}
     }
 }
